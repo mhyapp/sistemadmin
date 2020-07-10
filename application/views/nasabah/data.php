@@ -32,7 +32,7 @@
                                         <a href="<?php echo base_url();?>admin/nasabah/add" class="btn-sm btn-success text-white"><i class="mdi mdi-account-multiple-plus"></i> Tambah Data</a>
                                         <div class="card-block table-border-style">
                                             <div class="table-responsive">
-                                                <table class="table table-hover">
+                                                <table id="tabelnsb" class="table table-hover">
                                                     <thead>
                                                         <tr>
                                                             <th>No</th>

@@ -28,7 +28,7 @@ class Nasabah extends CI_Controller {
         {   
             $datanasabah     = array(
 				'nama_nasabah' => $this->input->post('nama_nasabah'),
-				'alamat' => $this->input->post('alamat')
+				'alamat'       => $this->input->post('alamat')
             );
 
             $this->Mod_nasabah->tambahNasabah($datanasabah);
@@ -58,7 +58,9 @@ class Nasabah extends CI_Controller {
                     'alamat'       => $this->input->post('alamat')
                 );
                 // $idnasabah = $this->input->post('idnasabah');
-                $this->Mod_nasabah->update_nasabah($this->input->post('idnasabah',TRUE),$datanasabah);            
+                // var_dump($datanasabah);
+                // die;
+                $this->Mod_nasabah->update_nasabah($idnasabah,$datanasabah);            
                 redirect('admin/nasabah/index');
             }
             else

@@ -24,7 +24,7 @@
 
         function update_nasabah($idnasabah,$datanasabah)
         {
-            $idnasabah = $this->input->post('idnasabah');
+            // $idnasabah = $this->input->post('idnasabah',TRUE);
             $this->db->where('idnasabah',$idnasabah);
             return $this->db->update('nasabah',$datanasabah);
         }

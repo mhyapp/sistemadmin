@@ -30,10 +30,8 @@
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <?php echo 
-                                                    form_open('admin/nasabah/edit/');
-                                                     ?>
-                                                    <form> 
+                                                    <!-- <?php echo form_open('user/edit/'.$user['iduser'],array("class"=>"form-horizontal")); ?> -->
+                                                    <form  action="<?php echo base_url('admin/nasabah/edit/'.$nasabah['idnasabah']); ?>" method="post"> 
                                                         <div class="form-group">
                                                             <label>Nama</label>
                                                             <input type="text" class="form-control" placeholder="Masukkan Nama" name="nama_nasabah" value="<?php echo $nasabah['nama_nasabah'];?>">
