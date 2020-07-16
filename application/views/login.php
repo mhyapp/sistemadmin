@@ -38,24 +38,22 @@
                 <span class="r"></span>
             </div>
             <div class="card">
+                <form method="post" action="<?php echo base_url('Login/auth') ?>">
                 <div class="card-body text-center">
                     <div class="mb-4">
                         <i class="feather icon-unlock auth-icon"></i>
                     </div>
                     <h3 class="mb-4">Silahkan Masuk</h3>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" name="username1" placeholder="Username">
                     </div>
                     <div class="input-group mb-4">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" name="password1" placeholder="Password">
                     </div>
-                    <div class="form-group text-left">
-                        <div class="checkbox checkbox-fill d-inline">
-                            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
-                            <label for="checkbox-fill-a1" class="cr"> Save Details</label>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary shadow-2 mb-4">Masuk</button>
+                    <button type="submit" name="login" class="btn btn-primary shadow-2 mb-4">Masuk</button>
+                </div>
+                </form>
+                <div class="card-body text-center">
                     <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p>
                     <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p>
                 </div>
