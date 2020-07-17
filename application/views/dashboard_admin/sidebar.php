@@ -12,10 +12,13 @@
                         <a href="<?php echo base_url('admin/nasabah') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">Nasabah</span></a>
                     </li>
                     <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Jaminan</span></a>
+                        <a href="<?php echo base_url('admin/jaminan') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Jaminan</span></a>
                     </li>
                     <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Notaris</span></a>
+                        <a href="<?php echo base_url('admin/jenis_jaminan') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Jenis Jaminan</span></a>
+                    </li>
+                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
+                        <a href="<?php echo base_url('admin/notaris') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Notaris</span></a>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
                         <label>Transaction</label>
