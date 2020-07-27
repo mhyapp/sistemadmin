@@ -12,6 +12,26 @@
             return $this->db->get('nasabah')->result();
         }
 
+        function nasabah_cari($searchTerm="")
+        {
+            $this->db->select('*');
+            $this->db->where("name like '%".$searchTerm."%' ");
+            $tampil_record = $this->db->get('nasabah');
+            $nasabah = $tampil_record->result_array();
+
+            $data = array();
+            foreach ($nasabah as $nsb) {
+                $data[] = array(
+                        "idnasabah"=>$nsb['idnasabah'],
+                        "nama_nasabah"     =>$nsb['nama_nasabah']
+                );
+                return $data;
+            }
+            
+            
+            
+        }
+
         function tambahNasabah($datanasabah)
         {
             return $this->db->insert('nasabah', $datanasabah);

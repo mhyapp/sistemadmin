@@ -27,20 +27,36 @@
                                     <div class="card">
                                     <div class="card-body">
                                             <h5>Input Transaksi Keluar</h5>
+                                            <button class="btn-sm btn-primary" data-toggle="modal" data-target="#modalcarinasabah">cari</button>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <!--  -->
+                                                    
+                                                    
                                                     <form action="<?php echo base_url('admin/nasabah/add') ?>" method="post"> 
                                                         <div class="form-group">
-                                                            <label>Nama Nasabah</label>
+                                                            <label>Nama Nasabah</label> 
                                                             <input type="text" class="form-control" placeholder="Masukkan Nama" name="nama_nasabah">
                                                             <span class="text-danger"><?php echo form_error('nama_nasabah');?></span>
+                                                            <select id="pilihNasabah" class="form-control select2" name="idnsb">
+                                                                <option value="0" selected="selected">--Piih Nasabah mu--</option>
+                                                            </select>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Jaminan</label>
                                                             <input type="text" class="form-control" placeholder="Masukkan Alamat" name="alamat">
                                                             <span class="text-danger"><?php echo form_error('alamat');?></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Notaris</label>
+                                                            <select name="idnotaris" id="idnotaris" class="form-control form-control-line">
+                                                                <option>Pilih Notaris</option>
+                                                                <?php foreach ($notaris as $row) :?>
+                                                                    <option value="<?php echo $row['idnotaris'];?>"><?php echo $row['nama_notaris'];?></option>
+                                                                <?php endforeach;?>
+                                                            </select>
+                                                            <span class="text-danger"><?php echo form_error('notaris');?></span>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Tanggal</label>
@@ -77,6 +93,30 @@
                                 </div>
                             </div>
                             <!-- [ Main Content ] end -->
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalcarinasabah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel"> Cari Nasabah </h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="<?php echo base_url().'admin/Notaris/Tambah_aksi'?>">
+                                            <div class="form-group">
+                                                <input type="text" name="nama" class="form-control" placeholder="masukkan nama nasabah">
+                                            </div>
+                                        <button type="reset" class="btn-sm btn-danger" data-dismiss="modal">Reset</button>
+                                        <button type="submit" class="btn-sm btn-primary">Simpan</button>
+                                        </form>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Modal -->
                         </div>
                     </div>
                 </div>
