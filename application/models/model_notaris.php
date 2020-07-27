@@ -1,6 +1,6 @@
 <?php
 
-class model_notaris extends CI_Model{
+class Model_notaris extends CI_Model{
 	public function tampil_data ()
 	{
 		return $this->db->get('notaris');
