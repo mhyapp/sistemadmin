@@ -27,7 +27,6 @@
                                     <div class="card">
                                     <div class="card-body">
                                             <h5>Input Transaksi Keluar</h5>
-                                            <button class="btn-sm btn-primary" data-toggle="modal" data-target="#modalcarinasabah">cari</button>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -37,11 +36,12 @@
                                                     <form action="<?php echo base_url('admin/nasabah/add') ?>" method="post"> 
                                                         <div class="form-group">
                                                             <label>Nama Nasabah</label> 
-                                                            <input type="text" class="form-control" placeholder="Masukkan Nama" name="nama_nasabah">
-                                                            <span class="text-danger"><?php echo form_error('nama_nasabah');?></span>
-                                                            <select id="pilihNasabah" class="form-control select2" name="idnsb">
-                                                                <option value="0" selected="selected">--Piih Nasabah mu--</option>
-                                                            </select>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" id="namanasabah" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                                    <div class="input-group-append">
+                                                                        <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#modalcarinasabah">Cari</button>
+                                                                    </div>
+                                                            </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Jaminan</label>
@@ -95,7 +95,7 @@
                             <!-- [ Main Content ] end -->
                             <!-- Modal -->
                             <div class="modal fade" id="modalcarinasabah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
+                                <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                     <div class="modal-header">
                                         <h4 class="modal-title" id="exampleModalLabel"> Cari Nasabah </h4>
@@ -104,13 +104,31 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="post" action="<?php echo base_url().'admin/Notaris/Tambah_aksi'?>">
-                                            <div class="form-group">
-                                                <input type="text" name="nama" class="form-control" placeholder="masukkan nama nasabah">
+                                        <div class="card-block table-border-style">
+                                            <div class="table-responsive">
+                                                <table id="tabelnsb" class="table table-hover" onchange="<?php echo base_url('assets/js/klik') ?>">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nama</th>
+                                                            <th>Jaminan</th>
+                                                            <th>Alamat</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php 
+                                                        $no=1;
+                                                        foreach($nasbah as $nsb){
+                                                    ?>
+                                                        <tr class="selected">
+                                                            <th><?php echo $nsb->nama_nasabah; ?></th>
+                                                            <th><?php echo $nsb->alamat; ?></th>
+                                                            <th>Alamat Nasabah</th>
+                                                        </tr>
+                                                        <?php } ?>
+                                                    </tbody>
+                                                </table>
                                             </div>
-                                        <button type="reset" class="btn-sm btn-danger" data-dismiss="modal">Reset</button>
-                                        <button type="submit" class="btn-sm btn-primary">Simpan</button>
-                                        </form>
+                                        </div>
                                     </div>
                                     
                                     </div>
