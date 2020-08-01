@@ -1,5 +1,5 @@
-<html lang="en">
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>BPRS Mitra Harmoni Yogyakarta</title>
@@ -19,10 +19,6 @@
 
     <!-- Favicon icon -->
     <link rel="icon" href="<?php echo base_url() ?>template_admin/assets/images/favicon.ico" type="image/x-icon">
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-    <!-- select2 -->
-    <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/select2.min.css"> -->
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="<?php echo base_url() ?>template_admin/assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <!-- animation css -->
@@ -69,12 +65,7 @@
 
 
     <!-- Required Js -->
-    <!-- select2 -->
-    <!-- <script src="<?php echo base_url() ?>assets/js/select2.min.js"></script> -->
-    <!-- <script src="<?php echo base_url() ?>assets/js/jquery-3.3.1.min.js"></script> -->
-    <script src="<?php echo base_url() ?>assets/js/klik.js"></script>
-
-    <script src="<?php echo base_url() ?>template_admin/assets/js/vendor-all.min.js"></script>
+	<script src="<?php echo base_url() ?>template_admin/assets/js/vendor-all.min.js"></script>
 	<script src="<?php echo base_url() ?>template_admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url() ?>template_admin/assets/js/pcoded.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -85,6 +76,5 @@
             $('#tabelnsb').DataTable();
         });
     </script>
-
 </body>
 </html>
